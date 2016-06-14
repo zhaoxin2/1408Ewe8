@@ -26,8 +26,7 @@
         if(fun_username()&fun_pwd()){
             var username= document.getElementById('username').value
             var pwd= document.getElementById('pwd').value
-            var remember= document.getElementById('remember').checked
-            $.post("index.php?r=login/proving",{username:username,pwd:pwd,remember:remember}, function(data){
+            $.post("index.php?r=login/proving",{username:username,pwd:pwd}, function(data){
                 if(data){
                     //alert(data)
                     location.href='index.php?r=login/login'
@@ -37,4 +36,3 @@
             });
         }
     }
-
